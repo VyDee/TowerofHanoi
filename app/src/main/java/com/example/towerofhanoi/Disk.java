@@ -2,15 +2,44 @@ package com.example.towerofhanoi;
 
 public class Disk
 {
-    private String disk;
     private int size;
+    private Disk nextDisk;
 
-    public Disk (String disk)
+    public Disk (int size)
     {
-        this.disk = disk;
-        this.size = disk.length();
-
-
+        this.size = size;
+        this.nextDisk = null;
     }
+
+    public Disk getNextDisk() {
+        return nextDisk;
+    }
+
+    public void setNextDisk(Disk nextDisk)
+    {
+        this.nextDisk = nextDisk;
+    }
+
+    public int getSize ()
+    {
+        return size;
+    }
+
+    public void display()
+    {
+        String answer = "*** ";
+        for (int i = 0; i <this.size; i++)
+        {
+            answer +="=";
+        }
+        System.out.println(answer);
+    }
+
+
+
+
+
+
+
 
 }
